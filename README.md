@@ -43,31 +43,23 @@ SiestaVault is a micro-NFT marketplace built on Stellar, designed specifically f
 - Soroban CLI (latest version)  
 
 ---
-Contract ID:CACCXDZXKS24GVOULDAKFIMW6YVA247IFRUDLLD3XTKT55JQDIBVQZRF
+##Contract ID:
+- CACCXDZXKS24GVOULDAKFIMW6YVA247IFRUDLLD3XTKT55JQDIBVQZRF
 
-Link: https://stellar.expert/explorer/testnet/contract/CACCXDZXKS24GVOULDAKFIMW6YVA247IFRUDLLD3XTKT55JQDIBVQZRF
+##Link: 
+- https://stellar.expert/explorer/testnet/contract/CACCXDZXKS24GVOULDAKFIMW6YVA247IFRUDLLD3XTKT55JQDIBVQZRF
 ---
-## Build, Test, Deploy, and Sample Invocation
+## Build, Test, Deploy
 
 ```bash
 # Build the contract
-soroban contract build
+contract build
 
 # Run tests
 cargo test
 
 # Deploy to testnet
-soroban contract deploy \
-  --wasm target/wasm32-unknown-unknown/release/stellaroid.wasm \
-  --network testnet
-
-# Sample CLI invocation (MVP function)
-soroban contract invoke \
-  --id <CONTRACT_ID> \
-  -- \
-  register_certificate \
-  --user GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
-  --cert_hash 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20
+stellar contract deploy   --wasm target/wasm32-unknown-unknown/release/Siesta_vault.wasm   --source kimi   --network testnet
 
   ```
 # MIT License
