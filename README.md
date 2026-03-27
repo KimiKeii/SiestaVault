@@ -1,1 +1,67 @@
-# SiestaVault
+# SiestaVault  
+A micro-NFT marketplace for Southeast Asian fan artists to mint, sell, and earn royalties on their digital art using Stellar.
+
+---
+
+## Problem and Solution
+
+### Problem  
+Fan artists in Southeast Asia who create game-inspired digital art have no accessible platform to monetize their work as NFTs. Existing platforms charge high fees and are primarily designed for Western audiences, making them less accessible and less relevant to SEA creators.
+
+### Solution  
+SiestaVault is a micro-NFT marketplace built on Stellar, designed specifically for SEA fan artists. It offers low minting fees, supports local payment context, and provides a discovery feed tailored to gaming fandoms. Artists can mint NFTs, set royalties, and earn from secondary sales.
+
+---
+
+## Timeline
+
+- Week 1: Smart contract development (NFT minting, ownership, duplicate prevention)  
+- Week 2: Frontend marketplace UI (basic listing, minting interface)  
+- Week 3: Wallet integration and testnet interaction  
+- Week 4: Discovery feed and royalty distribution logic  
+- Final Week: Testing, debugging, and testnet deployment  
+
+---
+
+## Stellar Features Used
+
+- Soroban Smart Contracts  
+  - NFT minting logic  
+  - Ownership storage  
+  - Royalty and reward logic  
+  - Duplicate prevention using on-chain storage  
+
+- Stellar DEX (planned for future)  
+  - Secondary marketplace trading  
+  - Liquidity for NFT resale  
+
+---
+
+## Prerequisites
+
+- Rust toolchain (latest stable)  
+- Soroban CLI (latest version)  
+
+---
+
+## Build, Test, Deploy, and Sample Invocation
+
+```bash
+# Build the contract
+soroban contract build
+
+# Run tests
+cargo test
+
+# Deploy to testnet
+soroban contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/stellaroid.wasm \
+  --network testnet
+
+# Sample CLI invocation (MVP function)
+soroban contract invoke \
+  --id <CONTRACT_ID> \
+  -- \
+  register_certificate \
+  --user GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+  --cert_hash 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20
