@@ -43,10 +43,10 @@ SiestaVault is a micro-NFT marketplace built on Stellar, designed specifically f
 - Soroban CLI (latest version)  
 
 ---
-##Contract ID:
+## Contract ID:
 - CACCXDZXKS24GVOULDAKFIMW6YVA247IFRUDLLD3XTKT55JQDIBVQZRF
 
-##Link: 
+## Link: 
 - https://stellar.expert/explorer/testnet/contract/CACCXDZXKS24GVOULDAKFIMW6YVA247IFRUDLLD3XTKT55JQDIBVQZRF
 ---
 ## Build, Test, Deploy
